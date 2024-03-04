@@ -10,7 +10,7 @@ function SignIn() {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:3000/login', { username, password });
+            const response = await axios.post('https://flight-booking-system-9n4n.onrender.com/login', { username, password });
             console.log(response.data);
         } catch (error) {
             console.error('Error logging in', error);
