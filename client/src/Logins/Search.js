@@ -16,7 +16,7 @@ const Search = () => {
     };
     const BookFlight = async id => {
         try {
-            await axios.delete(`http://localhost:3000/flights/${id}`);
+            await axios.delete(`https://flight-booking-system-9n4n.onrender.com/flights/${id}`);
             setFlights(flights.filter(flight => flight.id !== id));
         } catch (err) {
             console.error(err.message);
@@ -25,7 +25,7 @@ const Search = () => {
 
     const getFlights = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/flights');
+            const response = await axios.get('https://flight-booking-system-9n4n.onrender.com/flights');
             setFlights(response.data.results || []);
         } catch (err) {
             console.error(err.message);
