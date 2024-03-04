@@ -9,7 +9,7 @@ function SignUp() {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:3000/register', { username, password });
+            const response = await axios.post('https://flight-booking-system-9n4n.onrender.com/register', { username, password });
             alert(response.data);
         } catch (error) {
             console.error('Error registering user', error);
